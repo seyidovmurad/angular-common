@@ -1,0 +1,6 @@
+<div class="{{'pb-0 ' + classes}}" [ngClass]="{'modal-body': type == 'modal', 'card-body': type != 'modal'}"
+	*ngIf="messageService && messageService.isVisible">
+	<div class="alert mb-0" role="alert" [innerHTML]="messageService.message"
+		[ngClass]="{'alert-success': messageService.isSuccess, 'alert-danger': !messageService.isSuccess}">
+	</div>
+</div>
